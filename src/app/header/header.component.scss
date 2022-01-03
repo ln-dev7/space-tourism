@@ -1,33 +1,92 @@
-.header{
+.header {
+  width: 100%;
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   left: 0;
   right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   backdrop-filter: blur(2px);
-  &-logo{
-    margin-left: 1.5rem;
+  &-contains {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    backdrop-filter: blur(2px);
   }
-  .line{
-    width: 30%;
-    height: 1px;
-    background: #fff;
-    padding-right: 20rem;
-    opacity: .5;
-    z-index: 2;
-  }
-  &-links{
+  &-contain {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #00000041;
-    padding-left: 5rem;
-    padding-right: 10rem;
-    li{
-      padding: 1.5rem;
-      span{
+  }
+  &-logo {
+    margin-left: 2rem;
+  }
+  &-line {
+    width: 473px;
+    height: 1px;
+    background: #fff;
+    opacity: 0.5;
+    z-index: 2;
+  }
+  &-links {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5rem;
+    background: hsla(0, 0%, 100%, 0.058823529411764705);
+    backdrop-filter: blur(15px);
+    li:not(.active) {
+      position: relative;
+      padding: 1.5rem 0;
+      margin: 0 1.5rem;
+      font-family: "Barlow Condensed", sans-serif;
+      transition: background 0.3s ease-in-out;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #fff;
+        transform-origin: 50% 0;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+
+      span {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: bold;
+        padding-right: 0.5rem;
+      }
+    }
+    li.active{
+      position: relative;
+      padding: 1.5rem 0;
+      margin: 0 1.5rem;
+      font-family: "Barlow Condensed", sans-serif;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+      }
+      span {
+        font-family: "Barlow Condensed", sans-serif;
         font-weight: bold;
         padding-right: 0.5rem;
       }
