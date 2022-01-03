@@ -1,0 +1,36 @@
+.header{
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(2px);
+  &-logo{
+    margin-left: 1.5rem;
+  }
+  .line{
+    width: 30%;
+    height: 1px;
+    background: #fff;
+    padding-right: 20rem;
+    opacity: .5;
+    z-index: 2;
+  }
+  &-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000041;
+    padding-left: 5rem;
+    padding-right: 10rem;
+    li{
+      padding: 1.5rem;
+      span{
+        font-weight: bold;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
