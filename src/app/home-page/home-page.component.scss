@@ -1,5 +1,88 @@
-.home{
+.home {
   height: 100vh;
-  background-image: url('../../assets/home/background-home-desktop.jpg');
+  background-image: url("../../assets/home/background-home-desktop.jpg");
   background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .card {
+    margin-bottom: 5rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-text {
+    width: 450px;
+    height: 382px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 28px;
+    }
+    h1 {
+      font-size: 150px;
+    }
+    p {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 18px;
+    }
+  }
+  &-explore {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 50%;
+    height: 274px;
+    width: 274px;
+    cursor: pointer;
+    color: #0b0d17;
+    font-size: 32px;
+    z-index: 0;
+    &:hover {
+      &::before {
+        animation: big ease 1s alternate infinite;
+
+      }
+      &:after {
+        animation: big ease 2s alternate infinite;
+        animation-delay: .2s;
+      }
+    }
+    @keyframes big {
+       50%{
+         transform: scale(0.9);
+       }
+       100%{
+         transform: scale(1.1);
+       }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 120%;
+      width: 120%;
+      opacity: 0.2;
+      background: inherit;
+      border-radius: 50%;
+      z-index: -1;
+      transform: scale(0);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 110%;
+      width: 110%;
+      opacity: 0.5;
+      background: inherit;
+      border-radius: 50%;
+      z-index: -1;
+      transform: scale(0);
+    }
+  }
 }
