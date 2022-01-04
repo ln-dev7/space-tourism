@@ -18,6 +18,9 @@ import { HeaderComponent } from './header/header.component';
 import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 import { AppRoutingModule } from './app-routing.module';
+import { DestinationComponent } from './destination/destination.component';
+import { CrewComponent } from './crew/crew.component';
+import { TechnologyComponent } from './technology/technology.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { AppRoutingModule } from './app-routing.module';
     TechnologySpaceportComponent,
     TechnologyVehiculeComponent,
     HomePageComponent,
-    HeaderComponent
+    HeaderComponent,
+    DestinationComponent,
+    CrewComponent,
+    TechnologyComponent
   ],
   imports: [
     BrowserModule,
