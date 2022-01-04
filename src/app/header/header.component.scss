@@ -24,25 +24,28 @@
   &-logo {
     margin-left: 2rem;
   }
+  &-burger{
+    display: none;
+  }
   &-line {
-    width: 473px;
+    width: 35%;
     height: 1px;
     background: #fff;
     opacity: 0.5;
     z-index: 2;
   }
   &-links {
-    width: 90%;
+    width: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    margin-left: 5rem;
+    padding-right: 15%;
     background: hsla(0, 0%, 100%, 0.058823529411764705);
     backdrop-filter: blur(15px);
     li:not(.active) {
       position: relative;
       padding: 1.5rem 0;
-      margin: 0 1.5rem;
+      margin: 0 2rem;
       font-family: "Barlow Condensed", sans-serif;
       transition: background 0.3s ease-in-out;
       cursor: pointer;
@@ -90,6 +93,36 @@
         font-weight: bold;
         padding-right: 0.5rem;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .header{
+    top: 0;
+  }
+  .header-line{
+    display: none;
+  }
+    .header-links{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 0;
+      margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .header{
+    &-links{
+      display: none;
+    }
+    &-burger{
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
