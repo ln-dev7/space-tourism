@@ -7,13 +7,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(2px);
   &-contains {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    backdrop-filter: blur(2px);
   }
   &-contain {
     width: 100%;
@@ -117,13 +115,37 @@
 @media screen and (max-width: 600px) {
   .header{
     margin-top: 1rem;
-    &-links{
-      display: none;
-    }
+    // &-links{
+    //   display: none;
+    // }
     &-burger{
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-right: 1rem;
+      cursor: pointer;
+      z-index: 4;
+      .none{
+        display: none;
+      }
+    }
+    &-contains{
+      width: 75%;
+      height: 100vh;
+      position: absolute;
+      right: 0;
+      top: -1rem;
+      z-index: 3;
+    }
+    &-links{
+      background: #0B0D17;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 5rem;
+      display: none;
     }
   }
 }
